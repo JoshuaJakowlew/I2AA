@@ -10,6 +10,11 @@ namespace ascii
 		cv::resize(m_image, m_image, {  }, 1.0, 0.666, cv::INTER_AREA);
 	}
 
+	auto ImageLoader::isEmpty() -> bool
+	{
+		return m_image.empty();
+	}
+
 	auto ImageLoader::getBuffer() -> std::tuple<data_t*, const data_t*>
 	{
 		return { m_image.data, m_image.dataend };

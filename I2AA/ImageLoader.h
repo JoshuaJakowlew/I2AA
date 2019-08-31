@@ -15,6 +15,7 @@ namespace ascii
 
 		ImageLoader(std::string_view path);
 
+		[[nodiscard]] auto isEmpty() -> bool;
 		[[nodiscard]] auto getBuffer() -> std::tuple<data_t*, const data_t*>;
 		[[nodiscard]] auto getSize() -> std::tuple<std::size_t, std::size_t>;
 	private:
